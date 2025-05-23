@@ -17,21 +17,17 @@ for i in range(len(arrA)) :
     in1 = str(input(f"Ruas e{i+1} dari simpul = "))
     in2 = str(input("ke simpul = "))
     if len(inp1)+len(inp2) == 0 :
-        inp1.append(in1)
-        inp2.append(in2)
+        inp1.append(in1), inp2.append(in2)
     elif inp2[i-1] == in2 :
-        inp1.append(in2)
-        inp2.append(in1)
+        inp1.append(in2), inp2.append(in1)
     else :
-        inp1.append(in1)
-        inp2.append(in2)
+        inp1.append(in1), inp2.append(in2)
 print(f"{inp1}\n{inp2}")
 # -----------------------------------------------------
 
 # bikin list bolak balik
 for i in range(len(arrA)) :
-    edges.append((arrA[i], arrB[i]))
-    edges.append((arrB[i], arrA[i]))
+    edges.append((arrA[i], arrB[i])), edges.append((arrB[i], arrA[i]))
 print(edges)
 
 # identifikaasi walk?
@@ -69,12 +65,9 @@ if isWalk :
                     pathDilewati.append(inp1[i])
                 else :
                     isPath = False
-
-            # eksekusi path
-            if isPath :
-                print("ini adalah trail dan path")
-            else :
-                print("ini adalah trail bukan path")
+            print("ini adalah trail dan path" if isPath else "ini adalah trail bukan path")
+    else :
+        print("ini bukan trail maupun path")
 
 else:
-    print("Ini BUKAN walk (tidak semua simpul saling terhubung)")
+    print("Ini bukan walk (tidak semua simpul saling terhubung)")
