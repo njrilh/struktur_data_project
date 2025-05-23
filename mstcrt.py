@@ -12,17 +12,17 @@ vJalur = []
 hasil = []
 
 # mencari semua jalur dari awal ke akhir
-def cari_jalur(posisi, total, sudah_dilewati):
+def cari_jalur(posisi, total, dilewati):
     if posisi == akhir:
         vJalur.append(total)
-        jalur.append(sudah_dilewati)
+        jalur.append(dilewati)
         return
 
     for i in range(len(a)):
-        if a[i] == posisi and b[i] not in sudah_dilewati:
-            cari_jalur(b[i], total + [v[i]], sudah_dilewati + [b[i]])
-        elif b[i] == posisi and a[i] not in sudah_dilewati:
-            cari_jalur(a[i], total + [v[i]], sudah_dilewati + [a[i]])
+        if a[i] == posisi and b[i] not in dilewati:
+            cari_jalur(b[i], total + [v[i]], dilewati + [b[i]])
+        elif b[i] == posisi and a[i] not in dilewati:
+            cari_jalur(a[i], total + [v[i]], dilewati + [a[i]])
 
 # menjumlahkan seluruh value dari tiap jalur ditemukan
 def jumHasil() :
