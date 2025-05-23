@@ -3,8 +3,23 @@ arrA = ["a", "b", "c", "d", "a"]
 arrB = ["b", "c", "d", "a", "c"]
 
 # graph turunan
-inp1 = ["a", "b", ]
-inp2 = ["b", "c", ]
+inp1 = []
+inp2 = []
+
+edg = int(input("Ada berapa rusa dalam graph turunan ? = "))
+for i in range (edg) :
+    in1 = str(input(f"Ruas dari simpul = "))
+    in2 = str(input("ke simpul = "))
+    if len(inp1)+len(inp2) == 0 :
+        inp1.append(in1)
+        inp2.append(in2)
+    elif inp2[i-1] == in2 :
+        inp1.append(in2)
+        inp2.append(in1)
+    else :
+        inp1.append(in1)
+        inp2.append(in2)
+print(f"{inp1}\n{inp2}")
 
 # tampungan
 edgeAsli = []
