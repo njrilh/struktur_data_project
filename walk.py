@@ -12,7 +12,7 @@ isWalk = True
 isTrail = True
 isPath =True
 
-# input ruas simpul
+# input ruas simpul turunan ----------------------------
 for i in range(len(arrA)) :
     in1 = str(input(f"Ruas e{i+1} dari simpul = "))
     in2 = str(input("ke simpul = "))
@@ -26,6 +26,7 @@ for i in range(len(arrA)) :
         inp1.append(in1)
         inp2.append(in2)
 print(f"{inp1}\n{inp2}")
+# -----------------------------------------------------
 
 # bikin list bolak balik
 for i in range(len(arrA)) :
