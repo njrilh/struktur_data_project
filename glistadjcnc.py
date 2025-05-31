@@ -13,8 +13,7 @@ def addRuas(u, v):
     list[uIdx].append(vIdx)
     list[vIdx].append(uIdx)
 def printMatrix():
-    print("matriks adjc")
-    print("  ", " ".join(simpul))
+    print("matriks adjc", "\n  ", " ".join(simpul))
     for i, row in enumerate(matrix):
         print(simpul[i], row)
 def printList():
