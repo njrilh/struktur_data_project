@@ -1,5 +1,5 @@
-size = int(input("Berapa simpul? = "))
-simpul = input("Masukkan nama-nama simpul (pisahkan spasi): ").split()
+size = int(input("berapa simpul? = "))
+simpul = input("masukkan nama2 simpul (pisahkan spasi): ").split()
 simpulIdx = {}
 for i in range(len(simpul)) :
     simpulIdx[simpul[i]] = i 
@@ -22,10 +22,10 @@ def printList():
         smpl = simpul[i]
         tetangga = [simpul[j] for j in list[i]]
         print(f"{smpl} --> {', '.join(tetangga)}")
-ruas = int(input("Masukkan total berapa ruas (edge)? = "))
+ruas = int(input("masukkan total berapa ruas ? = "))
 for _ in range(ruas):
-    inp1 = input("Masukkan simpul asal (huruf): ").strip()
-    inp2 = input("Masukkan simpul tujuan (huruf): ").strip()
+    inp1 = input("masukkan dari simpul : ").strip()
+    inp2 = input("masukkan ke simpul : ").strip()
     addRuas(inp1, inp2)
 printMatrix()
 printList()
