@@ -3,8 +3,14 @@ simpul = input("masukkan nama2 simpul (pisahkan spasi): ").split()
 simpulIdx = {}
 for i in range(len(simpul)) :
     simpulIdx[simpul[i]] = i 
-matrix = [[0] * size for _ in range(size)]
-list = [[]for _ in range (size)]
+print(simpul)
+matrix = []
+for i in range (size) :
+    row = [0] * size
+    matrix.append(row)
+list = []
+for i in range (size) :
+    list.append([])
 def addRuas(u, v):
     uIdx = simpulIdx[u]
     vIdx = simpulIdx[v]
@@ -12,6 +18,7 @@ def addRuas(u, v):
     matrix[vIdx][uIdx] = 1
     list[uIdx].append(vIdx)
     list[vIdx].append(uIdx)
+    print(f'{matrix}\n{list}')
 def printMatrix():
     print("matriks adjc", "\n  ", " ".join(simpul))
     for i, row in enumerate(matrix):
