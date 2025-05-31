@@ -1,33 +1,34 @@
 size = int(input("Berapa simpul? = "))
-nodeName = input("Masukkan nama-nama simpul (pisahkan spasi): ").split()
-indexName = {}
-for i in range(len(nodeName)) :
-    indexName[nodeName[i]] = i 
-print(nodeName)
+simpul = input("Masukkan nama-nama simpul (pisahkan spasi): ").split()
+simpulIdx = {}
+for i in range(len(simpul)) :
+    simpulIdx[simpul[i]] = i 
+print(simpul)
 matrix = [[0] * size for _ in range(size)]
 list = [[]for _ in range (size)]
-def addEdge(u, v):
-    uIdx = indexName[u]
-    vIdx = indexName[v]
+def addRuas(u, v):
+    uIdx = simpulIdx[u]
+    vIdx = simpulIdx[v]
     matrix[uIdx][vIdx] = 1
     matrix[vIdx][uIdx] = 1
     list[uIdx].append(vIdx)
     list[vIdx].append(uIdx)
+    print(f'{matrix}\n{list}')
 def printMatrix():
     print("matriks adjc")
-    print("  ", " ".join(nodeName))
+    print("  ", " ".join(simpul))
     for i, row in enumerate(matrix):
-        print(nodeName[i], row)
+        print(simpul[i], row)
 def printList():
     print("list adjc")
     for i in range(size):
-        simpul = nodeName[i]
-        tetangga = [nodeName[j] for j in list[i]]
-        print(f"{simpul} --> {', '.join(tetangga)}")
+        smpl = simpul[i]
+        tetangga = [simpul[j] for j in list[i]]
+        print(f"{smpl} --> {', '.join(tetangga)}")
 ruas = int(input("Masukkan total berapa ruas (edge)? = "))
 for _ in range(ruas):
     inp1 = input("Masukkan simpul asal (huruf): ").strip()
     inp2 = input("Masukkan simpul tujuan (huruf): ").strip()
-    addEdge(inp1, inp2)
+    addRuas(inp1, inp2)
 printMatrix()
 printList()
