@@ -39,11 +39,9 @@ else:
     jumlah_tercepat = float('inf')
     jumlah_terlama = 0
     semua_jalur = []
-
     while jalur:
         jalur_aktif = jalur.pop(0)
         kota_terakhir = jalur_aktif[-1]
-
         if kota_terakhir == tujuan:
             jumlah_kota = len(jalur_aktif)
             semua_jalur.append(jalur_aktif)
@@ -53,7 +51,6 @@ else:
             if jumlah_kota > jumlah_terlama:
                 jumlah_terlama = jumlah_kota
                 rute_terlama = jalur_aktif
-
         for kota_sekitar in graph1.get(kota_terakhir, []):
             if kota_sekitar not in jalur_aktif:
                 jalur.append(jalur_aktif + [kota_sekitar])
