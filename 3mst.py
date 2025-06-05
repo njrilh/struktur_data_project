@@ -2,6 +2,7 @@
 a = ["a", "b", "c", "d", "e"] # Dari simpul ini
 b = ["b", "c", "d", "e", "a"] # Ke simpul ini
 v = [7, 10, 5, 9, 3 ] # valuenya 
+#-------------------------------------------------
 # input dan tampungan
 awal = str(input("Masukan simpul awal = ")).lower()
 akhir = str(input("Masukan simpul akhir = ")).lower()
