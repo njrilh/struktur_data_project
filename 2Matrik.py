@@ -1,6 +1,7 @@
 # Ubah aja Graphnya di sini
 gr1 = ["c", "c", "d",] # Dari simpul ini
 gr2 = ["b", "d", "a",] # Ke simpul ini
+#-----------------------------------------
 sim = set()
 for i in range (len(gr1)) :
     sim.add(gr1[i]), sim.add(gr2[i])
