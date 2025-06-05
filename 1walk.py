@@ -1,6 +1,7 @@
 # Ubah Graph Aslinya Disini
 gr1= ["a", "b", "c", "d", "a", "b"] # Dari Simpul ini
 gr2= ["b", "c", "d", "a", "c", "d"] # Ke simpul ini
+#-----------------------------------------------------
 gras = []
 for i in range(len(gr1)) :
     gras.append((gr1[i], gr2[i]))
