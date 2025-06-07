@@ -40,17 +40,25 @@ def identWalk(simpulPath):
     else:
         print("Bukan Walk!!!")
 def prosesInput(user_input):
-    path = user_input.strip().lower().split()
+    path = user_input.lower().split()
     if all(p.startswith("e") for p in path):
         simpulPath = []
         for i, e in enumerate(path):
             if e not in ruasMap:
                 print(f"Ruas {e} tidak ditemukan!")
-                break
+                return
             a, b = ruasMap[e]
             if i == 0:
-                simpulPath.append(a)
-            simpulPath.append(b)
+                simpulPath.extend([a, b])
+            else:
+                last = simpulPath[-1]
+                if a == last:
+                    simpulPath.append(b)
+                elif b == last:
+                    simpulPath.append(a)
+                else:
+                    print(f"Ruas {e} tidak tersambung dengan simpul sebelumnya ({last})!")
+                    return
         identWalk(simpulPath)
     else:
         for e in path :
