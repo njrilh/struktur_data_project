@@ -1,7 +1,7 @@
 # Ubah aja Graphnya Disini
-a = ["a", "a", "a", "b", "b", "c", "d", "d", "e", "f"] # Dari simpul ini
-b = ["b", "c", "d", "c", "e", "d", "e", "f", "f", "a"] # Ke simpul ini
-v = [2, 3, 6, 1, 4, 2, 1, 5, 4, 3 ] # valuenya 
+a = ["m", "n", "o", "p", "q", "r", "s", "t", "n", "n", "u", "u", "q", "m", "o"] # Dari simpul ini
+b = ["n", "o", "p", "q", "r", "s", "t", "m", "s", "u", "r", "q", "s", "s", "q"] # Ke simpul ini
+v = [ 2,   3,   2,   2,   3,   2,   2 ,  2,   4,   1,   1,   3,   5 ,  3,   3 ] # valuenya 
 #-------------------------------------------------
 awal = str(input("Masukan simpul awal = ")).lower()
 akhir = str(input("Masukan simpul akhir = ")).lower()
@@ -24,8 +24,8 @@ cari_jalur(awal, [], [awal])
 jumHasil()
 minj = hasil.index(min(hasil))
 maxj = hasil.index(max(hasil))
-print(minj, maxj)
+# print(minj, maxj)
 print(f"Hasil pencarian semua ruas = {jalur} \nHasil value pencarian semua ruas = {vJalur}",
       f"\nSemua total bobot dari {awal} ke {akhir} = {hasil}")
-print(f"Minimum Spanning Tree = {min(hasil)} {jalur[minj]} {vJalur[minj]}",
+print(f"Shortest Path = {min(hasil)} {jalur[minj]} {vJalur[minj]}",
       f"\nCritical Path = {max(hasil)} {jalur[maxj]} {vJalur[maxj]}" if len(hasil) > 0 else "Tidak ada jalur ditemukan.")
