@@ -1,6 +1,6 @@
 # Ubah Graph Asli disini
-gr1 = ["a", "b", "c", "d", "e", "a"] #Dari simpul ini
-gr2 = ["b", "c", "d", "e", "a", "d"] # ke simpul ini
+gr1 = ["a", "b", "c", "d", "e", "f", "a", "e", "b", "a"] #Dari simpul ini
+gr2 = ["b", "c", "d", "e", "f", "a", "e", "b", "d", "c"] # ke simpul ini
 #----------------------------------------------------
 sim = set(gr1+gr2)
 print("\nGraph Asli (simpul): ", sorted(sim))
@@ -10,7 +10,7 @@ print("Graph Asli (Ruas): ", ruasMap)
 gras = []
 for i in range(len(gr1)):
     gras.append((gr1[i], gr2[i])), gras.append((gr2[i], gr1[i]))
-print(gras)
+# print(gras)
 def identWalk(simpulPath):
     isTertutup = simpulPath[0] == simpulPath[-1]
     isWalk = True
