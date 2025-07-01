@@ -1,7 +1,11 @@
-# Ubah aja Graphnya di sini
-gr1 = ["c", "c", "d",] # Dari simpul ini
-gr2 = ["b", "d", "a",] # Ke simpul ini
-#-----------------------------------------
+# Ubah Graph Asli disini
+gr1 = ["h", "i", "j", "k", "l", "m", "i", "n", "k"] #Dari simpul ini
+gr2 = ["i", "j", "k", "l", "m", "n", "n", "k", "m"] # ke simpul ini
+#----------------------------------------------------
+edg = []
+for i in range (len(gr1)):
+    edg.append((gr1[i], gr2[i]))
+print(edg)
 sim = set()
 for i in range (len(gr1)) :
     sim.add(gr1[i]), sim.add(gr2[i])
